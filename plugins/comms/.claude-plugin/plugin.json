@@ -1,0 +1,14 @@
+{
+  "name": "comms",
+  "version": "0.5.1",
+  "description": "The send gate, which stops every outbound message until you type send, and humanify, a de-tic pass for drafts written with AI in the room.",
+  "author": {
+    "name": "Jay Wright"
+  },
+  "keywords": [
+    "send-gate",
+    "humanify",
+    "writing"
+  ],
+  "homepage": "https://netmobster.github.io/unstuck-games/judgement-os/"
+}
