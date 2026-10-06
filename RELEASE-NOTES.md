@@ -1,6 +1,6 @@
-# Judgement OS: General Edition 0.2.5
+# Judgement OS: General Edition 0.2.6
 
-Built 2026-10-06 from source 0aca185.
+Built 2026-10-06 from source eb1d65f.
 
 The General Edition works from files on your machine: a profile you write for yourself (/labs:profile starts it) and a TASKS.md for your day. It never needs an account.
 
@@ -19,7 +19,11 @@ The General Edition works from files on your machine: a profile you write for yo
 
 ## Changes
 
-What's new in 0.2.5:
+What's new in 0.2.6:
+
+- **Pages and thinking tools trigger with everything installed.** With all eight plugins in, "make me an HTML checklist" went unstyled and "what am I missing" skipped the gears. The two descriptions now say plainly when to use them.
+
+0.2.5:
 
 - **An icon on every plugin,** for the plugin directory.
 
