@@ -1,4 +1,4 @@
-# Judgement OS: General Edition 0.2.2
+# Judgement OS: General Edition 0.2.3
 
 Built 2026-10-06 from source 99b7b43.
 
@@ -8,18 +8,22 @@ The General Edition works from files on your machine: a profile you write for yo
 
 | Plugin | Version | What it does |
 |---|---|---|
-| `labs` | 0.8.1 | The Judgement OS core: two judges consulted at marked decisions inside skills, the recorder that checks every answer and combines the two, the append-only log, /labs:profile, the one file the judges read about you, and /labs:try, which puts both judges on a morning blind so you can see which one you trust. |
-| `guard` | 0.2.2 | Hard rules as hooks: deploys are printed for you to run, destructive commands and secrets ask first, state files change only through their scripts, and a session is archived only when you say so. |
-| `sexyhtml` | 0.15.2 | House styles for finished HTML pages. /sexyhtml picks the style (ECHO-JAY by default, Seren for games) and the shape, with the Judgement OS weighing in when a request reads two ways; or name one: /sexyhtml:jay, /sexyhtml:seren, /sexyhtml:judgement-os. |
-| `make` | 0.8.1 | Say what you want made, and it lands in the right place, in your look: a page, a form or card in the chat, a deck, a design, a living doc, a file or a design system. /make picks where it lands, with the Judgement OS weighing in when a request reads two ways, then hands it to the right maker. Pages go to sexyhtml. |
+| `labs` | 0.8.2 | The Judgement OS core: two judges consulted at marked decisions inside skills, the recorder that checks every answer and combines the two, the append-only log, /labs:profile, the one file the judges read about you, and /labs:try, which puts both judges on a morning blind so you can see which one you trust. |
+| `guard` | 0.2.3 | Hard rules as hooks: deploys are printed for you to run, destructive commands and secrets ask first, state files change only through their scripts, and a session is archived only when you say so. |
+| `sexyhtml` | 0.15.3 | House styles for finished HTML pages. /sexyhtml picks the style (ECHO-JAY by default, Seren for games) and the shape, with the Judgement OS weighing in when a request reads two ways; or name one: /sexyhtml:jay, /sexyhtml:seren, /sexyhtml:judgement-os. |
+| `make` | 0.8.2 | Say what you want made, and it lands in the right place, in your look: a page, a form or card in the chat, a deck, a design, a living doc, a file or a design system. /make picks where it lands, with the Judgement OS weighing in when a request reads two ways, then hands it to the right maker. Pages go to sexyhtml. |
 | `comms` | 0.6.2 | The send gate, which stops every outbound message until you type send; humanify, a de-tic pass for drafts written with AI in the room; and poll, which reads the Slack channels you choose and drafts replies that post only when you approve them. |
-| `day` | 0.3.2 | A day loop for Claude Code: a short boot with the judges on the style pick, mid-day and end-of-day check-ins from your TASKS.md, habits you set up once, a daily reading and a phrase in a language you're learning, /flag for work you want to come back to, and a clock on every message. |
-| `dice` | 0.2.1 | Real dice for tabletop games: any notation, advantage and disadvantage, damage, ability scores, never an invented roll. And nine party games to play with Claude: /dice:play. |
-| `gears` | 0.3.1 | Thinking tools built by Jay Wright: gears, loops and modes through one router, or by name with /gears:gear. Add your own beside your profile. selfActual users get more, working from their live profile: see selfactual.ai. |
+| `day` | 0.3.3 | A day loop for Claude Code: a short boot with the judges on the style pick, mid-day and end-of-day check-ins from your TASKS.md, habits you set up once, a daily reading and a phrase in a language you're learning, /flag for work you want to come back to, and a clock on every message. |
+| `dice` | 0.2.2 | Real dice for tabletop games: any notation, advantage and disadvantage, damage, ability scores, never an invented roll. And nine party games to play with Claude: /dice:play. |
+| `gears` | 0.3.2 | Thinking tools built by Jay Wright: gears, loops and modes through one router, or by name with /gears:gear. Add your own beside your profile. selfActual users get more, working from their live profile: see selfactual.ai. |
 
 ## Changes
 
-What's new in 0.2.2:
+What's new in 0.2.3:
+
+- **Ready for the plugin directory.** Each plugin has its own README, an eval suite in evals/ (claude plugin eval), and its repository and licence in its manifest.
+
+0.2.2:
 
 - **The field guide starts with what you just installed:** the eight plugins in five lines, who it's for and who it isn't, and a link to the Judgement OS page. The welcome on first run links there too.
 

@@ -11,5 +11,7 @@
     "writing",
     "slack"
   ],
-  "homepage": "https://netmobster.github.io/unstuck-games/judgement-os/"
+  "homepage": "https://netmobster.github.io/unstuck-games/judgement-os/",
+  "repository": "https://github.com/netmobster/judgement-os-general",
+  "license": "MIT"
 }

@@ -1,6 +1,6 @@
 {
   "name": "labs",
-  "version": "0.8.1",
+  "version": "0.8.2",
   "description": "The Judgement OS core: two judges consulted at marked decisions inside skills, the recorder that checks every answer and combines the two, the append-only log, /labs:profile, the one file the judges read about you, and /labs:try, which puts both judges on a morning blind so you can see which one you trust.",
   "author": {
     "name": "Jay Wright"
@@ -11,5 +11,7 @@
     "judges",
     "decisions"
   ],
-  "homepage": "https://netmobster.github.io/unstuck-games/judgement-os/"
+  "homepage": "https://netmobster.github.io/unstuck-games/judgement-os/",
+  "repository": "https://github.com/netmobster/judgement-os-general",
+  "license": "MIT"
 }
