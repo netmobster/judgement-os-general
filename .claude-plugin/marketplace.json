@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "Judgement OS, the General Edition: a second opinion for your Claude Code skills, only when they need one. A rule decides, two judges weigh in only when it can't tell, you settle what they both disagree on, and every call is logged.",
-    "version": "0.2.4"
+    "version": "0.2.5"
   },
   "plugins": [
     {

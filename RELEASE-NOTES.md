@@ -1,6 +1,6 @@
-# Judgement OS: General Edition 0.2.4
+# Judgement OS: General Edition 0.2.5
 
-Built 2026-10-06 from source 266b274.
+Built 2026-10-06 from source 0aca185.
 
 The General Edition works from files on your machine: a profile you write for yourself (/labs:profile starts it) and a TASKS.md for your day. It never needs an account.
 
@@ -19,7 +19,11 @@ The General Edition works from files on your machine: a profile you write for yo
 
 ## Changes
 
-What's new in 0.2.4:
+What's new in 0.2.5:
+
+- **An icon on every plugin,** for the plugin directory.
+
+0.2.4:
 
 - **Evals that pass.** Every plugin's eval suite was reworked to test what an eval run can reach, and all 16 cases pass with the plugin installed. Nothing changes in how any plugin behaves.
 
