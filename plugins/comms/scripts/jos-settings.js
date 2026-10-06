@@ -18,7 +18,9 @@ const fs = require('fs');
 const path = require('path');
 const os = require('os');
 
-const DIR = path.join(os.homedir(), '.claude', 'judgement-os');
+// Inside Claude Code's own config folder: ~/.claude, or CLAUDE_CONFIG_DIR when one is set, so a second
+// config (a test install, say) never reads the first one's settings.
+const DIR = path.join(process.env.CLAUDE_CONFIG_DIR || path.join(os.homedir(), '.claude'), 'judgement-os');
 const DEFAULTS = {
   version: 1,
   // The person this install works for: what pages call them (ECHO-JAY's nameplate: FOR <NAME>). null: FOR YOU.
@@ -140,6 +142,8 @@ if (require.main === module) {
     const here = fs.readFileSync(__filename, 'utf8');
     const copies = ['labs', 'sexyhtml', 'comms', 'guard', 'day', 'sa'].map(p => path.join(__dirname, '..', '..', p, 'scripts', 'jos-settings.js')).filter(f => fs.existsSync(f));
     ok('the copies in every plugin that carries one are identical', copies.every(f => fs.readFileSync(f, 'utf8') === here));
+    const cfgOut = require('child_process').spawnSync(process.execPath, ['-e', 'console.log(require(' + JSON.stringify(__filename) + ').file({}))'], { env: Object.assign({}, process.env, { CLAUDE_CONFIG_DIR: path.join(tmp, 'cfg') }), encoding: 'utf8' }).stdout.trim();
+    ok('a CLAUDE_CONFIG_DIR keeps its own settings', cfgOut === path.join(tmp, 'cfg', 'judgement-os', 'settings.json'));
     fs.rmSync(tmp, { recursive: true, force: true });
     console.log(`${n - fail}/${n} pass`); process.exit(fail ? 1 : 0);
   }

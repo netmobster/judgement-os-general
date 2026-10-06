@@ -1,6 +1,6 @@
 {
   "name": "dice",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Real dice for tabletop games: any notation, advantage and disadvantage, damage, ability scores, never an invented roll. And nine party games to play with Claude: /dice:play.",
   "author": {
     "name": "Jay Wright"

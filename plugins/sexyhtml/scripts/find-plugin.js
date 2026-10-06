@@ -24,7 +24,8 @@ function candidates(plugin, home = os.homedir(), here = __dirname, env = process
   const override = env.JUDGEMENT_OS_PLUGINS;
   if (override) out.push(path.join(override, plugin));
   out.push(path.join(here, '..', '..', plugin));
-  const cache = path.join(home, '.claude', 'plugins', 'cache');
+  // Claude Code keeps its plugins under CLAUDE_CONFIG_DIR when one is set, so a second config finds its own.
+  const cache = env.CLAUDE_CONFIG_DIR ? path.join(env.CLAUDE_CONFIG_DIR, 'plugins', 'cache') : path.join(home, '.claude', 'plugins', 'cache');
   const found = [];
   let markets = [];
   try { markets = fs.readdirSync(cache); } catch (e) {}
@@ -57,6 +58,8 @@ if (require.main === module) {
     const c = candidates('day', tmp, '/nowhere/labs/scripts', {}).map(x => x.replace(/\\/g, '/'));
     ok('any marketplace, highest version first', c[1].endsWith('new-market/day/0.2.0') && c[2].endsWith('old-market/day/0.1.0'));
     ok('the override wins', candidates('day', tmp, '/x', { JUDGEMENT_OS_PLUGINS: '/o' })[0].replace(/\\/g, '/').endsWith('/o/day'));
+    const cfg = path.join(tmp, 'cfg'); fs.mkdirSync(path.join(cfg, 'plugins', 'cache', 'm', 'day', '0.3.0'), { recursive: true });
+    ok('a CLAUDE_CONFIG_DIR finds its own plugins', candidates('day', tmp, '/nowhere/labs/scripts', { CLAUDE_CONFIG_DIR: cfg }).map(x => x.replace(/\\/g, '/'))[1].endsWith('cfg/plugins/cache/m/day/0.3.0'));
     fs.rmSync(tmp, { recursive: true, force: true });
     console.log(`${n - fail}/${n} pass`); process.exit(fail ? 1 : 0);
   }

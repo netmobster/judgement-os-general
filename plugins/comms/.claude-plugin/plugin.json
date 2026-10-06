@@ -1,6 +1,6 @@
 {
   "name": "comms",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "The send gate, which stops every outbound message until you type send; humanify, a de-tic pass for drafts written with AI in the room; and poll, which reads the Slack channels you choose and drafts replies that post only when you approve them.",
   "author": {
     "name": "Jay Wright"

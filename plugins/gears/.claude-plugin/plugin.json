@@ -1,6 +1,6 @@
 {
   "name": "gears",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Thinking tools built by Jay Wright: gears, loops and modes through one router, or by name with /gears:gear. Add your own beside your profile. selfActual users get more, working from their live profile: see selfactual.ai.",
   "author": {
     "name": "Jay Wright"
