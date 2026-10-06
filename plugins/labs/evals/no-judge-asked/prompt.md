@@ -1,10 +1,10 @@
 ---
-name: try-explained
+name: no-judge-asked
 tags: [core]
 runs: 2
-max_turns: 10
+max_turns: 12
 timeout_seconds: 300
 allowed_tools: [Skill, Read, Glob, Grep, Write, Edit]
 ---
 
-What does /labs:try do, and what do I need before it works?
+Judgement OS never seems to ask its judges anything. Why not?

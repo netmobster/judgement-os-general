@@ -7,4 +7,4 @@ timeout_seconds: 300
 allowed_tools: [Skill, Read, Glob, Grep, Write, Edit]
 ---
 
-/make a page that explains our release process: branch, test, tag, publish. Save it as a file.
+Make a page that explains our release process: branch, test, tag, publish. Save it as a file.

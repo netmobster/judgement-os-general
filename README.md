@@ -2,7 +2,7 @@
 
 A second opinion for your Claude Code skills, only when they need one. The "OS" is a joke; the plugins aren't.
 
-Version 0.2.3 · MIT · made by Jay Wright · [the Judgement OS page](https://netmobster.github.io/unstuck-games/judgement-os/)
+Version 0.2.4 · MIT · made by Jay Wright · [the Judgement OS page](https://netmobster.github.io/unstuck-games/judgement-os/)
 
 ## What it does
 

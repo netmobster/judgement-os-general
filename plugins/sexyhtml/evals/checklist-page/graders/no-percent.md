@@ -1,7 +1,7 @@
 ---
 type: regex
-pattern: '/labs:profile'
+pattern: '[0-9]+%'
 flags: i
-match: contains
+match: not_contains
 target: last_message
 ---
