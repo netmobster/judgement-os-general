@@ -1,14 +1,16 @@
 {
   "name": "dice",
-  "version": "0.1.2",
-  "description": "Real dice for tabletop games: any notation, advantage and disadvantage, damage, ability scores. Never an invented roll.",
+  "version": "0.2.0",
+  "description": "Real dice for tabletop games: any notation, advantage and disadvantage, damage, ability scores, never an invented roll. And nine party games to play with Claude: /dice:play.",
   "author": {
     "name": "Jay Wright"
   },
   "keywords": [
     "dice",
     "dnd",
-    "tabletop"
+    "tabletop",
+    "games",
+    "party-games"
   ],
   "homepage": "https://netmobster.github.io/unstuck-games/judgement-os/"
 }

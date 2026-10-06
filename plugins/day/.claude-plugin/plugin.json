@@ -1,7 +1,7 @@
 {
   "name": "day",
-  "version": "0.2.1",
-  "description": "A day loop for Claude Code: a short boot and mid-day and end-of-day check-ins from your TASKS.md, /flag for work you want to come back to, and a clock on every message.",
+  "version": "0.3.0",
+  "description": "A day loop for Claude Code: a short boot with the judges on the style pick, mid-day and end-of-day check-ins from your TASKS.md, habits you set up once, a daily reading and a phrase in a language you're learning, /flag for work you want to come back to, and a clock on every message.",
   "author": {
     "name": "Jay Wright"
   },
@@ -9,7 +9,9 @@
     "boot",
     "checkin",
     "daily",
-    "tasks"
+    "tasks",
+    "habits",
+    "language"
   ],
   "homepage": "https://netmobster.github.io/unstuck-games/judgement-os/"
 }

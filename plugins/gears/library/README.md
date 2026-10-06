@@ -8,8 +8,8 @@ DEVIL'S ADVOCATE, and keeps the part that survived. A **mode** changes the regis
 
 | Folder | What ships |
 |---|---|
-| `gears/` | brief, closer, devils-advocate, grumpy, handoff, pressure-test, scout, whiteboard, and `thread` (a loop part) |
-| `loops/` | architect, forge, gauntlet, locate, reality-check, retro, root-cause, scaffold |
+| `gears/` | brief, closer, devils-advocate, foundry, grumpy, handoff, portrait, pressure-test, prioritize-me, scout, whiteboard, and four loop parts: audience, editor, thread, voice-check |
+| `loops/` | architect, debrief, forge, gauntlet, localize, locate, patch, pattern, read, reality-check, reformat, retro, root-cause, scaffold, and one loop part: realign |
 | `modes/` | goofy-mode, night-mode, rest-mode |
 
 Ask in plain words ("grumpy on this", "forge the pricing idea") and the router picks. By name:

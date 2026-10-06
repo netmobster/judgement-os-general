@@ -1,8 +1,8 @@
 # The session recap: every close leaves a page
 
 The done list, kept: what was built, fixed and filed (each with why and its commit), the decisions,
-the open loops and what's next, as one ECHO-JAY page. `/sa:close` makes it before the session log
-and puts its link in the log.
+the open loops and what's next, as one ECHO-JAY page.
+Ask `/make` for a session recap at the end of a session, and keep its link with your notes.
 
 ## Make one
 

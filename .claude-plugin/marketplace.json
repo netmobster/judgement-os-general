@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "Judgement OS, the General Edition: a second opinion for your Claude Code skills, only when they need one. A rule decides, two judges weigh in only when it can't tell, you settle what they both disagree on, and every call is logged.",
-    "version": "0.1.0"
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "labs",
       "source": "./plugins/labs",
-      "description": "The Judgement OS core: two judges consulted at marked decisions inside skills, the recorder that checks every answer and combines the two, the append-only log, and /labs:profile, the one file the judges read about you.",
-      "version": "0.7.2"
+      "description": "The Judgement OS core: two judges consulted at marked decisions inside skills, the recorder that checks every answer and combines the two, the append-only log, /labs:profile, the one file the judges read about you, and /labs:try, which puts both judges on a morning blind so you can see which one you trust.",
+      "version": "0.8.0"
     },
     {
       "name": "guard",
@@ -24,37 +24,37 @@
       "name": "sexyhtml",
       "source": "./plugins/sexyhtml",
       "description": "House styles for finished HTML pages. /sexyhtml picks the style (ECHO-JAY by default, Seren for games) and the shape, with the Judgement OS weighing in when a request reads two ways; or name one: /sexyhtml:jay, /sexyhtml:seren, /sexyhtml:judgement-os.",
-      "version": "0.15.0"
+      "version": "0.15.1"
     },
     {
       "name": "make",
       "source": "./plugins/make",
       "description": "Say what you want made, and it lands in the right place, in your look: a page, a form or card in the chat, a deck, a design, a living doc, a file or a design system. /make picks where it lands, with the Judgement OS weighing in when a request reads two ways, then hands it to the right maker. Pages go to sexyhtml.",
-      "version": "0.7.2"
+      "version": "0.8.0"
     },
     {
       "name": "comms",
       "source": "./plugins/comms",
-      "description": "The send gate, which stops every outbound message until you type send, and humanify, a de-tic pass for drafts written with AI in the room.",
-      "version": "0.5.1"
+      "description": "The send gate, which stops every outbound message until you type send; humanify, a de-tic pass for drafts written with AI in the room; and poll, which reads the Slack channels you choose and drafts replies that post only when you approve them.",
+      "version": "0.6.0"
     },
     {
       "name": "day",
       "source": "./plugins/day",
-      "description": "A day loop for Claude Code: a short boot and mid-day and end-of-day check-ins from your TASKS.md, /flag for work you want to come back to, and a clock on every message.",
-      "version": "0.2.1"
+      "description": "A day loop for Claude Code: a short boot with the judges on the style pick, mid-day and end-of-day check-ins from your TASKS.md, habits you set up once, a daily reading and a phrase in a language you're learning, /flag for work you want to come back to, and a clock on every message.",
+      "version": "0.3.0"
     },
     {
       "name": "dice",
       "source": "./plugins/dice",
-      "description": "Real dice for tabletop games: any notation, advantage and disadvantage, damage, ability scores. Never an invented roll.",
-      "version": "0.1.2"
+      "description": "Real dice for tabletop games: any notation, advantage and disadvantage, damage, ability scores, never an invented roll. And nine party games to play with Claude: /dice:play.",
+      "version": "0.2.0"
     },
     {
       "name": "gears",
       "source": "./plugins/gears",
       "description": "Thinking tools built by Jay Wright: gears, loops and modes through one router, or by name with /gears:gear. Add your own beside your profile. selfActual users get more, working from their live profile: see selfactual.ai.",
-      "version": "0.2.3"
+      "version": "0.3.0"
     }
   ]
 }

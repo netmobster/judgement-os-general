@@ -1,6 +1,6 @@
 ---
 name: checkin
-description: "A check-in, mid-day or end-of-day: held items, then tasks; at the end of the day, what carries to tomorrow. Claude offers it when the clock hook says it's due."
+description: "A check-in, mid-day or end-of-day: held items, habits still open, then tasks; at the end of the day, what carries to tomorrow and whether the reading and the phrase landed. Claude offers it when the clock hook says it's due."
 argument-hint: midday|eod
 ---
 
@@ -36,7 +36,16 @@ text. Each task question carries its own content (the title, how overdue) inside
 1. **Held items.** `day.js show` → `held`. If any, one `AskUserQuestion` question, multiSelect:
    "Held from this morning: load any?" (at most four options; `from: "yesterday"` items say so).
    Chosen items run as boot phases, one per turn, and `day.js unhold <item>` once loaded.
-2. **Task review.** The overdue and due-today tasks,
+2. **Habits still open** (when habits are set up). Scores from the morning can't be the whole day,
+   so the rest come back here, and only those. `node "${CLAUDE_PLUGIN_ROOT}/scripts/habits.js" show`
+   prints the nearest rung and the rows not yet done. It goes in the final text exactly as printed,
+   with no commentary. The user scores in their next message however they like ("walk 2, water 3,
+   pushups 2 x20") or pastes the scoring page: turn it into JSON (reps go under `"reps"`) and run
+   `habits.js log '<json>'`, sending only what they just scored. Unscored rows are fine: blank is
+   never zero. **Skip the step** when every row is done, or when there's no line today and `habits`
+   was held (step 1 already offered it). No line and not held: one line, *"Habits aren't logged
+   today. Want the page?"*
+3. **Task review.** The overdue and due-today tasks,
    from `TASKS.md`. **Three oldest overdue**, then anything due today, as `AskUserQuestion`
    questions, **one per task, at most four per call**, with how overdue it is in each question.
    Options: `done` · `tomorrow` · `next week` · `drop` → tick it · date it tomorrow · date it a
@@ -44,7 +53,7 @@ text. Each task question carries its own content (the title, how overdue) inside
    *(Today+1, not due+1: pushing a nine-day-old task to its own due+1 leaves it overdue.)*
    **Dismissed = skip:** write nothing; it comes back next time. **Private task contexts are left
    out** (the settings' `privateTopics.taskContexts`).
-3. `day.js done midday`.
+4. `day.js done midday`.
 
 ## End of day
 
@@ -55,7 +64,15 @@ text. Each task question carries its own content (the title, how overdue) inside
    tomorrow` · `let go`. Keep → `day.js carry <item>` (it becomes tomorrow's held item, marked
    from yesterday). Let go or dismissed → nothing. **Nothing carries unless it was kept on
    purpose.**
-3. `day.js done eod`. The end of the day isn't the end of the session: close nothing unasked.
+3. **Habits still open** (when habits are set up). Same as mid-day step 2: `habits.js show` in the
+   final text, open rows only, and anything they score goes through `habits.js log`. It's the last
+   chance to score today; after that the day's line stands as it is, and nothing is chased.
+4. **The reading and the phrase** (when either is set up).
+   `node "${CLAUDE_PLUGIN_ROOT}/scripts/daily.js" status`. For each one not done today, one
+   `AskUserQuestion` question (both in one call): "Reading done?" / "Phrase done?", options `yes` ·
+   `not today`. Yes → `daily.js done <reading|phrase>`. Not today or dismissed → nothing: it stays
+   where it is and comes back tomorrow. Never scored, never counted: no "3 days behind".
+5. `day.js done eod`. The end of the day isn't the end of the session: close nothing unasked.
 
 ## Picker answers
 

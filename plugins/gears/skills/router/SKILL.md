@@ -28,21 +28,23 @@ summary.** How to write your own: `${CLAUDE_PLUGIN_ROOT}/library/README.md`.
 ## The menu
 
 **Gears:** `scout` · `whiteboard` · `devils-advocate` · `grumpy` · `closer` · `brief` ·
-`pressure-test` · `handoff`
+`pressure-test` · `handoff` · `foundry` · `prioritize-me` · `portrait`
 
 **Loops:** `forge` · `root-cause` · `retro` · `reality-check` · `gauntlet` · `scaffold` ·
-`architect` · `locate`
+`architect` · `locate` · `debrief` · `pattern` · `patch` · `reformat` · `localize` · `read`
 
 **Modes:** `goofy-mode` · `night-mode` · `rest-mode`
 
 Plus the user's own, each listed by its `title` and `summary`.
 
-**Hidden part,** loaded **only as a stage inside a loop**, never offered and never run alone:
-`thread`. If the user asks for it by name, say it's a loop part, and offer the loop that uses it
-(`root-cause` or `retro`).
+**Hidden parts,** loaded **only as a stage inside a loop**, never offered and never run alone:
+`thread` · `editor` · `audience` · `voice-check` · `realign`. If the user asks for one by name,
+say it's a loop part, and offer a loop that uses it: `thread` runs in `pattern`, `retro` and
+`root-cause`; `editor` in `patch`, `reformat` and `localize`; `audience` and `voice-check` in
+`localize`; `realign` in `patch` and `reformat`.
 
-A few gears mention others that don't ship here (EDITOR, FORMAT, AUDIENCE, PORTRAIT, DEFAULT).
-Skip those mentions; never improvise the missing gear.
+A few gears mention others that don't ship here (STAKEHOLDER, FORMAT, LABS, THERAPY). Skip those
+mentions; never improvise the missing gear.
 
 ## Names
 
@@ -57,15 +59,18 @@ three.
 | They say something like | Route |
 |---|---|
 | names an item, or something close | that item |
+| "what do I do first", "too much on my plate" | `prioritize-me` |
 | "what am I missing", "something's off" | `scout`; `locate` if the thing has no name yet |
 | "poke holes", "kill this" | `devils-advocate`; `pressure-test` if they want a fight |
 | "is this real?", "who cares" | `grumpy` |
-| "before I build this" | `brief`; `scaffold` if it's still vague; `architect` if getting it wrong costs something real |
+| "before I build this" | `brief`; `scaffold` if it's still vague; `foundry` if it's a system; `architect` if getting it wrong costs something real |
 | "options", "brainstorm" | `whiteboard`; `forge` or `gauntlet` if they want them tested too |
 | "am I off base?", a hedged position | `reality-check` |
 | "decide", "land it" | `closer` |
-| "it keeps happening" | `root-cause` |
-| "it's over, what did we learn" | `retro` |
+| a person, before a conversation that turns on them | `portrait`; `read` for the whole room, then the person |
+| "it keeps happening" | `root-cause`; `pattern` if it isn't a problem yet |
+| "it's over, what did we learn" | `retro`; `debrief` after adversarial work |
+| a draft for a different reader or a different place | `localize` (the reader) or `reformat` (the container); `patch` for one fix |
 | "hand this off", "write the next-session brief" | `handoff`: it writes `HANDOFF.md`, which `/day:boot` reads |
 | a register: playful, late, low | the mode |
 | nothing fits | answer it plainly |
